@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { FormularioingresoComponent } from './components/formularioingreso/formularioingreso.component';
 import { HomeComponent } from './components/home/home.component';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 
@@ -13,6 +14,10 @@ const routes: Routes = [
 
   {
     path:'home', redirectTo: ''
+  },
+
+  {
+    path: 'ingresolibro', component: FormularioingresoComponent
   },
 
   {
