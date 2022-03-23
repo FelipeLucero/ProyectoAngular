@@ -9,6 +9,14 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { FormularioingresoComponent } from './components/formularioingreso/formularioingreso.component';
+import { FormsModule } from '@angular/forms';
+import { AlifeFileToBase64Module } from 'alife-file-to-base64';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment } from 'src/environments/environment';
+import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { TablalibroComponent } from './components/tablalibro/tablalibro.component';
+
 
 @NgModule({
   declarations: [
@@ -18,11 +26,17 @@ import { FormularioingresoComponent } from './components/formularioingreso/formu
     HomeComponent,
     ContactoComponent,
     Pagina404Component,
-    FormularioingresoComponent
+    FormularioingresoComponent,
+    LoginComponent,
+    ProfileComponent,
+    TablalibroComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AlifeFileToBase64Module,
+    AuthModule.forRoot(environment.auth0)
   ],
   providers: [],
   bootstrap: [AppComponent]

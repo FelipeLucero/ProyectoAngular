@@ -12,4 +12,10 @@ export class FormularioingresoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  onFileChanged(e: any){
+    console.log(e);  
+  }
+  
+
 }

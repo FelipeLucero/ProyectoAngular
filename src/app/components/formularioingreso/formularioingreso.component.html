@@ -25,7 +25,8 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label fw-bold" for="imglibro">Adjuntar Imagen de Libro</label>
-                            <input class="form-control" type='file' name="imglibro" id="imglibro" r>
+                            <input class="form-control" type='file' alife-file-to-base64
+                                (onFileChanged)="onFileChanged($event)">
                         </div>
                         <div class="mb-3">
                             <label class="form-label fw-bold" for="categoria">Categoría</label>

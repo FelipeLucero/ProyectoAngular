@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  auth0:{
+    domain: 'nttdatalucero.us.auth0.com',
+    clientId: 'jHN73X7FbDsFVOXl7f6j7ondudpF3QXd',
+    redirectUri:  'http://localhost:4200',
+  }
+
+
 };
 
 /*
