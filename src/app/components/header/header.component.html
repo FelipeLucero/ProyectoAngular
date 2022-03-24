@@ -9,10 +9,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
+                
                 <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
                 <a class="nav-link" href="#">Catalogo</a>
                 <a class="nav-link" href="#">Crud Libros</a>
-                <a class="nav-link disabled">Iniciar Sesión</a>
+ 
+                    <li>
+                        <ul class="navbar-nav d-flex ms-auto ">
+                            <li class="nav-item">
+                                <a class="btn btn-outline-primary  " routerLink="/login" *ngIf="!isAuthenticated">Iniciar Sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-outline-danger ms-2  " routerLink=""(click)="logout()" *ngIf="!isAuthenticated">Cerrar Sesión</a>
+                            </li>
+                        </ul>
+                    </li>
+
             </div>
         </div>
     </div>
