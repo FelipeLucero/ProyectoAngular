@@ -17,10 +17,13 @@
                     <li>
                         <ul class="navbar-nav d-flex ms-auto ">
                             <li class="nav-item">
-                                <a class="btn btn-outline-primary  " routerLink="/login" *ngIf="!isAuthenticated">Iniciar Sesión</a>
+                                <a class="btn btn-outline-primary" [routerLink]="['/login']" *ngIf="!isAuthenticated">Iniciar Sesión</a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn btn-outline-danger ms-2  " routerLink=""(click)="logout()" *ngIf="!isAuthenticated">Cerrar Sesión</a>
+                                <a class="btn btn-outline-primary me-2" [routerLink]="['/profile']" *ngIf="!isAuthenticated">Usuario</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-outline-danger ms-2  " [routerLink]="['']"(click)="logout()" *ngIf="isAuthenticated">Cerrar Sesión</a>
                             </li>
                         </ul>
                     </li>
